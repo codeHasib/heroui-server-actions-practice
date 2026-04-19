@@ -13,14 +13,17 @@ const NewTask = ({ createTask }) => {
           name="title"
           placeholder="Add title"
           className="bg-white text-black py-3 px-4"
+          required
         />
-        <input name="priority" type="text" placeholder="Add priority" />
-        <input name="status" type="text" placeholder="Add Status" />
-        <input onClick={() => redirect("/tasks")} type="submit" />
-        <button onClick={() => redirect("/tasks")} slot="cancel">
-          {" "}
-          Cancel{" "}
-        </button>
+        <input
+          name="priority"
+          type="text"
+          placeholder="Add priority"
+          required
+        />
+        <input name="status" type="text" placeholder="Add Status" required />
+        <input type="submit" />
+        <button slot="cancel"> Cancel </button>
       </form>
     </div>
   );
